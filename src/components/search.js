@@ -1,6 +1,6 @@
 import { useState} from "react";
 
-import getCityData from "../weatherApi/api"
+import getCityData from "../API/Weather"
 
 function Search(){
 
