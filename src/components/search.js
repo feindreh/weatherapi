@@ -14,19 +14,29 @@ function Search(){
         //handle State
         setInput(e.target.value)
         //auto complete
+        autoComplete(e.target.value)
         
     }
-    async function autoComplete(e){
+    async function autoComplete(input = input){
         //autocomplete input string
+
+        //fetch data
         const data = await getAutoData(input)
         const arr = []
         data.features.forEach((d) => {
             let prop = d.properties
             arr.push(prop)
         })
-        setAuto(arr)
+
+        //get city names without duplicates
+        const cityNameArray = arr.map((ob) => ob.city)
+        const singleValues = new Set(cityNameArray)
+
+        //setState to get the rerender 
+        setAuto([...singleValues])
     }
-    async function getLocations(e){
+
+    async function getLocations(){
         //use weather API with input value to find possible Locations
     }
 
@@ -36,7 +46,7 @@ function Search(){
             <button type ="button" onClick = {autoComplete}>AutoCompelte</button>
             <button type="button" onClick={getLocations}>Gib Mir Wätta</button>
             <div>
-                {auto.map((prop) => {return (<Autocomplete key={prop.place_id}city = {prop}/>)})}
+                {auto.map((name) => {return (<Autocomplete key={name} name = {name}/>)})}
             </div>
         </div>
     )
