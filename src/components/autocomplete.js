@@ -1,9 +1,9 @@
 import "../style/autocomplete.css"
 
 function Autocomplete(props){
-    const {name} = props
+    const {name,cb} = props
     return(
-        <div className="autocomplete">
+        <div onClick={cb}className="autocomplete">
             {name}
         </div>
     )
