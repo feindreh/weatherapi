@@ -1,5 +1,7 @@
 import { useState} from "react";
 
+import getCityData from "../weatherApi/api"
+
 function Search(){
 
     const [input,setInput] = useState("")
@@ -12,8 +14,11 @@ function Search(){
     }
 
     async function handleClick(){
-        //use weather API with input value to find weather
+        //use weather API with input value to find possible Locations
         console.log("Use Weather API with",input)
+        const possibleLocations = await getCityData(input)
+        possibleLocations.forEach((loc) => {console.log(loc)})
+        
     }
 
     return (
