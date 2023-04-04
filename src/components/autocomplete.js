@@ -1,11 +1,10 @@
 import "../style/autocomplete.css"
 
 function Autocomplete(props){
-    const {city} = props
+    const {name} = props
     return(
         <div className="autocomplete">
-            <div>{city.city}</div>
-            <div>{city.country}</div>
+            {name}
         </div>
     )
 }
