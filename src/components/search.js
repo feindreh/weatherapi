@@ -1,4 +1,4 @@
-import { useState,useRef} from "react";
+import { useState,useRef,useEffect} from "react";
 
 import getCityData from "../API/Weather"
 import getAutoData from "../API/autoComplete"
@@ -9,14 +9,30 @@ function Search(){
 
     const inputRef = useRef()
     const [auto,setAuto] = useState([])
+    const [timer,setTimer] = useState(null)
 
+    useEffect(() => {
+        //clear timer on unmount
+        return () => clearTimeout(timer);
+      }, [timer]);
+    
     async function handleChange(e){
-        
-        //auto complete
-        autoComplete(e.target.value)
+        //clear auto then reset a timer and start it to find new autocompletes
+        // ==> we will only get autocompletes if we stop typing for some time
+        // ==> saves alot of api calls
+
+        setAuto([])
+        startAutoCompelteTimer(e.target.value)
         
     }
-    async function autoComplete(input = input){
+    function startAutoCompelteTimer(string){
+        //clear timer and start it again to get autocompletes after some time
+        clearTimeout(timer)
+        setTimer(setTimeout(()=>{
+            autoComplete(string)
+        },350)) 
+    }
+    async function autoComplete(input){
         //autocomplete input string
         if(input.length < 3){
             //api doesnt support strings with less then 3 letters
