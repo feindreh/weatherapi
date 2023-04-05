@@ -1,5 +1,8 @@
 import "../style/Content.css"
 
+import Icon from "@mdi/react";
+import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@mdi/js';
+
 import {KelvinToCelsius,msToKmh} from "../utility"
 
 import Search from "./search"
@@ -26,9 +29,7 @@ function Content(props){
             <div className="flexContainer">
 
                 <div className="data">
-                    <div className="icon">
-                        icon
-                    </div>
+                    <Icon className="icon" path={mdiThermometerLines} size={1} />
                     <div className="valueWrap">
                         <div className="text">
                             Feelslike
@@ -40,9 +41,7 @@ function Content(props){
                 </div>
                 
                 <div className="data">
-                    <div className="icon">
-                        icon
-                    </div>
+                    <Icon className="icon" path={mdiWaves} size={1} />
                     <div className="valueWrap">
                         <div className="text">
                             Humidity
@@ -53,9 +52,7 @@ function Content(props){
                     </div>
                 </div>
                 <div className="data">
-                    <div className="icon">
-                        icon
-                    </div>
+                    <Icon className="icon" path={mdiWeatherWindy} size={1} />
                     <div className="valueWrap">
                         <div className="text">
                             Windspeed 
@@ -66,9 +63,7 @@ function Content(props){
                     </div>
                 </div>
                 <div className="data">
-                    <div className="icon">
-                        icon
-                    </div>
+                    <Icon className="icon" path={mdiNavigation} size={1} />
                     <div className="valueWrap">
                         <div className="text">
                             Direction
