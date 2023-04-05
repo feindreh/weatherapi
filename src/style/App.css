@@ -1,0 +1,18 @@
+#App{
+    min-height: 100vh;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    --medium: 16px;
+
+}
+
+.flexContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap:var(--medium)
+}

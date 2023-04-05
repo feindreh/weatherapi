@@ -1,0 +1,22 @@
+#content{
+    flex:1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap:var(--medium)
+}
+
+.valueWrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+}
