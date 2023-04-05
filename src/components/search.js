@@ -21,16 +21,16 @@ function Search(){
         // ==> we will only get autocompletes if we stop typing for some time
         // ==> saves alot of api calls
 
-        setAuto([])
-        startAutoCompelteTimer(e.target.value)
+        //setAuto([])
+        AutoCompelteTimer(e.target.value)
         
     }
-    function startAutoCompelteTimer(string){
+    function AutoCompelteTimer(string){
         //clear timer and start it again to get autocompletes after some time
         clearTimeout(timer)
         setTimer(setTimeout(()=>{
             autoComplete(string)
-        },350)) 
+        },250)) 
     }
     async function autoComplete(input){
         //autocomplete input string
