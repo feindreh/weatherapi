@@ -3,20 +3,63 @@
     display: flex;
     align-items: stretch;
     justify-content: space-around;
+    margin:var(--medium);
+    flex-wrap: wrap;
+    gap:var(--medium)
 }
-
+/*Right*/
 .data{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap:var(--medium)
+    gap:var(--small)
 }
 
+.icon{
+    height: var(--big)!important;
+    width: var(--big)!important;
+}
 .valueWrap{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap:var(--small);
 
     flex-direction: column;
+}
+.text{
+    font-size: var(--small);
+    text-align: center;
+}
+.value{
+    font-size: var(--medium);
+    text-align: center;
+    font-weight: 700;
+}
+/*Left*/
+.flexContainer.left{
+    align-items:flex-start;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.description{
+    font-size:var(--big);
+    font-weight:bold;
+    text-align: left;
+}
+
+.name,.date{
+    font-size:var(--small);
+    font-weight:200;
+    text-align: left;
+}
+
+.temp{
+    font-size:var(--big);
+    font-weight:bold;
+    text-align: left;
 }
