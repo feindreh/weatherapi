@@ -1,3 +1,4 @@
+import "./style/reset.css"
 import "./style/App.css"
 
 import { useState,useEffect } from "react";
