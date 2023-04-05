@@ -1,14 +1,12 @@
 
 
 #App{
-    height: 100dvh;
+    min-height: 100dvh;
+    overflow:scroll;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    --big:calc(var(--medium)*1.6);
-    --medium: 16px;
-    --small: calc(var(--medium)/1.6);
     background-image: urL("../img/forest-g59058b814_1920.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -19,6 +17,10 @@
 
     overflow: scroll;
 
+    --medium:calc(1.5rem + 1vw);
+    --big:calc(var(--medium) * 1.6);
+    --small:calc(var(--medium) / 1.6)
+
 
 }
 
@@ -27,5 +29,6 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    gap:var(--medium)
+    gap:var(--medium);
+    padding:var(--small);
 }
