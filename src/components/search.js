@@ -30,6 +30,7 @@ function Search(){
             arr.push(prop)
         })
         //get city names without duplicates
+        console.log(arr)
         const cityNameArray = arr.map((ob) => ob.city)
         const singleValues = new Set(cityNameArray)
         //setState to get the rerender 
