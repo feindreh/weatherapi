@@ -15,7 +15,7 @@ function makeIconUrl(iconName){
 
 async function getWeather(cityName){
   //handle the weather API
-  console.log("get Weather from",cityName)
+
   //build url and get city gps
   const gpsUrl = createGPSURL(cityName)
   const gpsRes = await fetch(gpsUrl)
