@@ -18,15 +18,17 @@ function Content(props){
     }
     return (
         <div id="content">
-            <div className="flexContainer">
-                <div>{weather[0].description}</div>
-                <div>{name} {sys.country}</div>
-                <div>Datum ?</div>
-                <div>{KelvinToCelsius(main.temp)} °C</div>
+            <div className="flexContainer left">
+                <div className="location">
+                    <div className="description">{weather[0].description}</div>
+                    <div className="name">{name} {sys.country}</div>
+                    <div className="date">Datum ?</div>
+                </div>
+                <div className="temp">{KelvinToCelsius(main.temp)} °C</div>
                 <div>{weather[0].icon}</div>
                 <Search search={search}/>
             </div>
-            <div className="flexContainer">
+            <div className="flexContainer right">
 
                 <div className="data">
                     <Icon className="icon" path={mdiThermometerLines} size={1} />
