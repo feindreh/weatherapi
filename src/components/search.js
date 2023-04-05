@@ -1,4 +1,4 @@
-import { useState,useRef,useEffect} from "react";
+import { useState,useRef} from "react";
 
 import getAutoData from "../API/autoComplete"
 
