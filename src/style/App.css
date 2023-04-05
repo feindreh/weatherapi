@@ -1,11 +1,24 @@
+
+
 #App{
-    min-height: 100vh;
-    padding:20px;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    --big:calc(var(--medium)*1.6);
     --medium: 16px;
+    --small: calc(var(--medium)/1.6);
+    background-image: urL("../img/forest-g59058b814_1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    color:white;
+    font-family: montserrat,sans-serif;
+
+    overflow: scroll;
+
 
 }
 
