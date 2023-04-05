@@ -24,10 +24,60 @@ function Content(props){
                 <Search search={search}/>
             </div>
             <div className="flexContainer">
-                <div>Feelslike: {KelvinToCelsius(main.feels_like)} °C</div>
-                <div>Humidity: {main.humidity} %</div>
-                <div>Windspeed: {msToKmh(wind.speed)}/kmh</div>
-                <div>Direction: {wind.deg}</div>
+
+                <div className="data">
+                    <div className="icon">
+                        icon
+                    </div>
+                    <div className="valueWrap">
+                        <div className="text">
+                            Feelslike
+                        </div>
+                        <div className="value">
+                            {KelvinToCelsius(main.feels_like)} °C
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="data">
+                    <div className="icon">
+                        icon
+                    </div>
+                    <div className="valueWrap">
+                        <div className="text">
+                            Humidity
+                        </div>
+                        <div className="value">
+                            {main.humidity} %
+                        </div>
+                    </div>
+                </div>
+                <div className="data">
+                    <div className="icon">
+                        icon
+                    </div>
+                    <div className="valueWrap">
+                        <div className="text">
+                            Windspeed 
+                        </div>
+                        <div className="value">
+                            {msToKmh(wind.speed)}/kmh
+                        </div>
+                    </div>
+                </div>
+                <div className="data">
+                    <div className="icon">
+                        icon
+                    </div>
+                    <div className="valueWrap">
+                        <div className="text">
+                            Direction
+                        </div>
+                        <div className="value">
+                            {wind.deg}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
