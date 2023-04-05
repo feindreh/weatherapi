@@ -12,15 +12,23 @@ function makeIconUrl(iconName){
     return `https://openweathermap.org/img/wn/${iconName}@2x.png`
 }
 
-async function getCityData(name){
+
+async function getWeather(cityName){
+  //handle the weather API
+  console.log("get Weather from",cityName)
+  //build url and get city gps
+  const gpsUrl = createGPSURL(cityName)
+  const gpsRes = await fetch(gpsUrl)
+  const gpsData = await gpsRes.json()
+  const {lat,lon} = gpsData[0]
   
-    const GPSURL = createGPSURL(name);
-    const res = await fetch(GPSURL)
+  //build url and get city weather
+  const weatherUrl = createWeatherURL(lat,lon)
+  const weatherRes = await fetch(weatherUrl)
+  const weatherData = await weatherRes.json()
 
-    let result
-    await res.json().then((data) => {result = data})
+  return weatherData
 
-    return result
 }
 
-export default getCityData
+export default getWeather
