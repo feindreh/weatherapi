@@ -1,6 +1,7 @@
 
 
 #App{
+    position: relative;
     min-height: 100dvh;
     overflow:scroll;
     display: flex;
@@ -22,6 +23,14 @@
     --small:calc(var(--medium) / 1.6)
 
 
+}
+
+#opacity{
+    background-color: black;
+    opacity: 0.3;
+    height:100%;
+    width: 100%;
+    position: absolute;
 }
 
 .flexContainer{
