@@ -4,7 +4,7 @@ import Icon from "@mdi/react";
 import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@mdi/js';
 import { makeIconUrl } from "../API/Weather";
 
-import {KelvinToCelsius,msToKmh} from "../utility"
+import {KelvinToCelsius,msToKmh,allUpper} from "../utility"
 
 import Search from "./search"
 
@@ -22,7 +22,7 @@ function Content(props){
         <div id="content">
             <div className="flexContainer left">
                 <div className="location">
-                    <div className="description">{weather[0].description}</div>
+                    <div className="description">{allUpper(weather[0].description)}</div>
                     <div className="name">{name} {sys.country}</div>
                     <div className="date">Datum ?</div>
                 </div>
