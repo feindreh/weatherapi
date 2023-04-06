@@ -15,3 +15,20 @@ export function allUpper(string){
     return words.join(" ")
 }
 
+export function getTime(timezone){
+
+    const shift = (7200*1000) - (timezone*1000)
+    const stamp = Date.now()
+    const adjusted = stamp - shift
+
+    const date = new Date(adjusted).toString()
+    const results = date.split(" ")
+    return {
+        weekday:results[0],
+        month: results[1],
+        day: results[2],
+        year:results[3],
+        time:results[4]
+    }
+
+}
