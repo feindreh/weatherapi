@@ -65,12 +65,12 @@ function Search(props){
     }
     
     return (
-        <div>
+        <div id="search">
             <div className = "searchBar">
                 <input className = "input" ref={inputRef} onChange = {(e)=>{ AutoCompelteTimer(e.target.value)}}  type="text"  placeholder="Search City ..."></input>
                 <Icon className="glasses" onClick={handleButton} path={mdiMagnify} size={1} />
             </div>
-            <div>
+            <div id="auto">
                 {auto.map((name) => {return (<Autocomplete key={name} name = {name} cb={()=>{autoSelected(name)}}/>)})}
             </div>
         </div>
