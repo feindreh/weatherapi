@@ -4,28 +4,29 @@ import Icon from "@mdi/react";
 import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@mdi/js';
 import { makeIconUrl } from "../API/Weather";
 
-import {KelvinToCelsius,msToKmh,allUpper} from "../utility"
+import {KelvinToCelsius,msToKmh,allUpper,getTime} from "../utility"
 import moment from "moment";
 
 import Search from "./search"
 
 function Content(props){
    const {search,data} = props 
-   const{name,sys,main,weather,wind} = data
+   const{name,sys,main,weather,wind,timezone} = data
 
     if(name === undefined){
         return(
             <>Loading ....</>
         )
     }
-
+    const date = getTime(timezone)
     return (
         <div id="content">
             <div className="flexContainer left">
                 <div className="location">
                     <div className="description">{allUpper(weather[0].description)}</div>
                     <div className="name">{name} {sys.country}</div>
-                    <div className="date">{moment().format('dddd')} {moment().format('ll')}</div>
+                    <div className="date">{date.weekday}, {date.month} {date.day} {date.year}</div>
+                    <div>{date.time}</div>
                 </div>
                 <Search search={search}/>
                 <div className="temp">{KelvinToCelsius(main.temp)} °C</div>
