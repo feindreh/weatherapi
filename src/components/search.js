@@ -4,6 +4,13 @@ import getAutoData from "../API/autoComplete"
 
 import Autocomplete from "./autocomplete";
 
+import Icon from '@mdi/react';
+import { mdiMagnify } from '@mdi/js';
+
+
+
+import "../style/search.css"
+
 function Search(props){
 
     const {search} = props
@@ -17,6 +24,7 @@ function Search(props){
          // call callback search from props with input value
         clearTimeout(timer);
         let input = inputRef.current.value
+        if(input === ""){return}
         
         inputRef.current.value = ""
         setAuto([])
@@ -28,7 +36,7 @@ function Search(props){
         clearTimeout(timer)
         setTimer(setTimeout(()=>{
             autoComplete(string)
-        },250)) 
+        },180)) 
     }
     async function autoComplete(input){
         //autocomplete input string with api
@@ -55,11 +63,13 @@ function Search(props){
         inputRef.current.value = cityName
         setAuto([])
     }
-
+    
     return (
         <div>
-            <input ref={inputRef} onChange = {(e)=>{ AutoCompelteTimer(e.target.value)}}  type="text"  placeholder="City?"></input>
-            <button type="button" onClick={handleButton}>Wetter rausfinden</button>
+            <div className = "searchBar">
+                <input className = "input" ref={inputRef} onChange = {(e)=>{ AutoCompelteTimer(e.target.value)}}  type="text"  placeholder="Search City ..."></input>
+                <Icon className="glasses" onClick={handleButton} path={mdiMagnify} size={1} />
+            </div>
             <div>
                 {auto.map((name) => {return (<Autocomplete key={name} name = {name} cb={()=>{autoSelected(name)}}/>)})}
             </div>
