@@ -29,7 +29,6 @@ function App() {
   return (
     <div id="App">
       <Content data={data} search={startSearch}/>
-      <div id="opacity"></div>
     </div>
   );
 }
