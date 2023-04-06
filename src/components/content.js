@@ -26,9 +26,10 @@ function Content(props){
                     <div className="name">{name} {sys.country}</div>
                     <div className="date">Datum ?</div>
                 </div>
+                <Search search={search}/>
                 <div className="temp">{KelvinToCelsius(main.temp)} °C</div>
                 <img className = "weatherIcon" alt={weather[0].main} src={makeIconUrl(weather[0].icon)}></img>
-                <Search search={search}/>
+                
             </div>
             <div className="flexContainer right">
 
