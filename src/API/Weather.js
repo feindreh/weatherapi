@@ -8,8 +8,8 @@ function createGPSURL(city) {
     return `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=100&appid=${key}`;
   }
 
-function makeIconUrl(iconName){
-    return `https://openweathermap.org/img/wn/${iconName}@2x.png`
+export function makeIconUrl(iconName){
+    return `https://openweathermap.org/img/wn/${iconName}@4x.png`
 }
 
 
