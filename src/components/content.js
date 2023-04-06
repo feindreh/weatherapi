@@ -6,18 +6,35 @@ import { makeIconUrl } from "../API/Weather";
 
 import {KelvinToCelsius,msToKmh,allUpper,getTime} from "../utility"
 
+import { useState } from "react";
+
 import Search from "./search"
+import { useEffect } from "react";
 
 function Content(props){
    const {search,data} = props 
    const{name,sys,main,weather,wind,timezone} = data
+   const [date,setDate] = useState(getTime(0))
+    
+
+    useEffect(()=>{
+        const Interval = setInterval(()=>{
+            setDate(getTime(timezone))
+        },500)
+
+        return function (){clearInterval(Interval)}
+    },[timezone])
+
+
+
+
 
     if(name === undefined){
         return(
             <>Loading ....</>
         )
     }
-    const date = getTime(timezone)
+  
     return (
         <div id="content">
             <div className="flexContainer left">
