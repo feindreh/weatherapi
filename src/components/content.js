@@ -17,7 +17,7 @@ function Content(props){
             <>Loading ....</>
         )
     }
-    console.log(weather)
+
     return (
         <div id="content">
             <div className="flexContainer left">
