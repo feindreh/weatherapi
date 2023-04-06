@@ -2,6 +2,7 @@ import "../style/Content.css"
 
 import Icon from "@mdi/react";
 import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@mdi/js';
+import { makeIconUrl } from "../API/Weather";
 
 import {KelvinToCelsius,msToKmh} from "../utility"
 
@@ -16,6 +17,7 @@ function Content(props){
             <>Loading ....</>
         )
     }
+    console.log(weather)
     return (
         <div id="content">
             <div className="flexContainer left">
@@ -25,7 +27,7 @@ function Content(props){
                     <div className="date">Datum ?</div>
                 </div>
                 <div className="temp">{KelvinToCelsius(main.temp)} °C</div>
-                <div>{weather[0].icon}</div>
+                <img className = "weatherIcon" alt={weather[0].main} src={makeIconUrl(weather[0].icon)}></img>
                 <Search search={search}/>
             </div>
             <div className="flexContainer right">
