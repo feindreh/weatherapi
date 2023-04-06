@@ -32,3 +32,29 @@ export function getTime(timezone){
     }
 
 }
+
+export function windFromDeg(deg){
+    
+    if(deg >= 337 || deg <= 23){
+        return "N"
+    }
+    if(deg < 68){
+        return "NO"
+    }
+    if(deg<112){
+        return "O"
+    }
+    if(deg<157){
+        return "SO"
+    }
+    if(deg<202){
+        return "S"
+    }
+    if(deg<248){
+        return "SW"
+    }
+    if(deg<293){
+        return "W"
+    }
+        return "NW"
+}
