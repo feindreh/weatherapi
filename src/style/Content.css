@@ -1,6 +1,4 @@
 #content{
-    position: absolute;
-    z-index: 5;
     flex:1;
     display: flex;
     align-items: stretch;
