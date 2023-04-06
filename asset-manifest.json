@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/weatherapi/static/css/main.ce6f0a1a.css",
+    "main.js": "/weatherapi/static/js/main.9ed0c5ba.js",
+    "static/media/forest-g59058b814_1920.jpg": "/weatherapi/static/media/forest-g59058b814_1920.67095c26570d1d196c4c.jpg",
+    "index.html": "/weatherapi/index.html",
+    "main.ce6f0a1a.css.map": "/weatherapi/static/css/main.ce6f0a1a.css.map",
+    "main.9ed0c5ba.js.map": "/weatherapi/static/js/main.9ed0c5ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce6f0a1a.css",
+    "static/js/main.9ed0c5ba.js"
+  ]
+}
