@@ -1,0 +1,25 @@
+.searchBar{
+    border-bottom: white 2px solid;
+    display: flex;
+}
+
+.input{
+    color:white;
+    border: none;
+    background:none;
+    font-size: var(--small);
+    padding:5px;
+}
+.input:focus{
+    outline:none;
+}
+
+::placeholder { 
+    color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+
+.glasses{
+    height: var(--medium) !important;
+    width: var(--medium) !important;
+}
