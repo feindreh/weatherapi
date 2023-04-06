@@ -15,7 +15,7 @@
     color:white;
     font-family: montserrat,sans-serif;
 
-    overflow: scroll;
+    overflow: auto;
 
     --medium:calc(1.5rem + 1vw);
     --big:calc(var(--medium) * 1.6);
