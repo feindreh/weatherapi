@@ -5,7 +5,6 @@ import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@md
 import { makeIconUrl } from "../API/Weather";
 
 import {KelvinToCelsius,msToKmh,allUpper,getTime} from "../utility"
-import moment from "moment";
 
 import Search from "./search"
 
