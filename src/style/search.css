@@ -1,5 +1,8 @@
+#search{
+    position: relative;
+}
+
 .searchBar{
-    border-bottom: white 2px solid;
     display: flex;
 }
 
@@ -22,4 +25,27 @@
 .glasses{
     height: var(--medium) !important;
     width: var(--medium) !important;
+}
+
+#auto{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #0e1022f3;
+    border: white solid 2px;
+    border-bottom-left-radius: var(--small);
+    border-bottom-right-radius: var(--small);
+}
+
+.autocomplete{
+    margin:0.5rem;
+    font-size: var(--small);
+    display: flex;
+
+}
+
+.autoGlasses{
+    height: var(--small) !important;
+    width: var(--small) !important;
 }
