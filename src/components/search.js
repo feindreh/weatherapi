@@ -60,8 +60,8 @@ function Search(props){
     }
     function autoSelected(cityName){
         //callback for Autocomplete component
-        inputRef.current.value = cityName
-        setAuto([])
+        inputRef.current.value = cityName;
+        handleButton();
     }
     
     return (
