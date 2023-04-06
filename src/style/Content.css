@@ -63,3 +63,7 @@
     font-weight:bold;
     text-align: left;
 }
+.weatherIcon{
+    height:calc(var(--big)*4);
+    width:calc(var(--big)*4);
+}
