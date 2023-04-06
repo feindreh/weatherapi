@@ -26,7 +26,6 @@ function App() {
     setData(data)
   }
 
-  console.log(data)
   return (
     <div id="App">
       <Content data={data} search={startSearch}/>
