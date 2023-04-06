@@ -4,7 +4,7 @@ import Icon from "@mdi/react";
 import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@mdi/js';
 import { makeIconUrl } from "../API/Weather";
 
-import {KelvinToCelsius,msToKmh,allUpper,getTime} from "../utility"
+import {KelvinToCelsius,msToKmh,allUpper,getTime,windFromDeg} from "../utility"
 
 import { useState } from "react";
 
@@ -15,7 +15,6 @@ function Content(props){
    const {search,data} = props 
    const{name,sys,main,weather,wind,timezone} = data
    const [date,setDate] = useState(getTime(0))
-    
 
     useEffect(()=>{
         const Interval = setInterval(()=>{
@@ -34,7 +33,11 @@ function Content(props){
             <>Loading ....</>
         )
     }
-  
+    
+    const direction = {
+        transform: `rotate(${wind.deg}deg)`
+    }
+
     return (
         <div id="content">
             <div className="flexContainer left">
@@ -86,13 +89,13 @@ function Content(props){
                     </div>
                 </div>
                 <div className="data">
-                    <Icon className="icon" path={mdiNavigation} size={1} />
+                    <Icon className="icon" style={direction} path={mdiNavigation} size={1} />
                     <div className="valueWrap">
                         <div className="text">
                             Direction
                         </div>
                         <div className="value">
-                            {wind.deg}
+                            {windFromDeg(wind.deg)}
                         </div>
                     </div>
                 </div>
