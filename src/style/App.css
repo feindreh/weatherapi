@@ -1,7 +1,6 @@
 
 
 #App{
-    position: relative;
     min-height: 100dvh;
     overflow:scroll;
     display: flex;
@@ -20,18 +19,12 @@
 
     --medium:calc(1.5rem + 1vw);
     --big:calc(var(--medium) * 1.6);
-    --small:calc(var(--medium) / 1.6)
+    --small:calc(var(--medium) / 1.6);
 
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
 
 }
 
-#opacity{
-    background-color: black;
-    opacity: 0.3;
-    height:100%;
-    width: 100%;
-    position: absolute;
-}
 
 .flexContainer{
     display: flex;
