@@ -5,6 +5,7 @@ import { mdiThermometerLines,mdiWaves,mdiWeatherWindy, mdiNavigation } from '@md
 import { makeIconUrl } from "../API/Weather";
 
 import {KelvinToCelsius,msToKmh,allUpper} from "../utility"
+import moment from "moment";
 
 import Search from "./search"
 
@@ -24,7 +25,7 @@ function Content(props){
                 <div className="location">
                     <div className="description">{allUpper(weather[0].description)}</div>
                     <div className="name">{name} {sys.country}</div>
-                    <div className="date">Datum ?</div>
+                    <div className="date">{moment().format('dddd')} {moment().format('ll')}</div>
                 </div>
                 <Search search={search}/>
                 <div className="temp">{KelvinToCelsius(main.temp)} °C</div>
