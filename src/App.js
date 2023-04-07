@@ -10,6 +10,7 @@ import getWeather from "./API/Weather";
 import day from "./img/day.svg"
 import dawn from "./img/dawn.svg"
 import night from "./img/night.svg"
+import forest from "./img/forest.jpg"
 
 import { getTime } from "./utility";
 
@@ -17,7 +18,7 @@ function App() {
 
 
   const [data,setData] = useState({})
-  const [backGround,setBackGround] = useState(day)
+  const [backGround,setBackGround] = useState(forest)
 
   function changeBackGround(time){
     if(time <6 || time > 20){return night}
