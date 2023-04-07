@@ -1,7 +1,7 @@
 import "./style/reset.css"
 import "./style/App.css"
 
-import { useState,useEffect,useRef } from "react";
+import { useState,useEffect} from "react";
 
 import Content from "./components/content";
 
@@ -20,9 +20,29 @@ function App() {
   const [data,setData] = useState({})
   const [backGround,setBackGround] = useState(forest)
 
+  const root = document.querySelector("#root")
+  
+  function changeColor(color){
+    if(color === "light"){
+      root.style.setProperty('--light', "white");
+      root.style.setProperty('--dark', "#0e1022");
+    }
+    if(color === "dark"){
+      root.style.setProperty('--light', "#0e1022");
+      root.style.setProperty('--dark', "white");
+    }
+  }
+
   function changeBackGround(time){
-    if(time <6 || time > 20){return night}
-    if(time < 16 && time > 8){return day}
+    if(time <6 || time > 20){
+      changeColor("light")
+      return night
+    }
+    if(time < 16 && time > 8){
+      changeColor("dark")
+      return day
+    }
+    changeColor("dark")
     return dawn
   }
 
