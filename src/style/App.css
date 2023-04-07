@@ -1,4 +1,11 @@
+#root{
+    --medium:calc(1.5rem + 1vw);
+    --big:calc(var(--medium) * 1.6);
+    --small:calc(var(--medium) / 1.6);
 
+    --light: white;
+    --dark: #0e1022;  
+}
 
 #App{
     min-height: 100dvh;
@@ -17,12 +24,7 @@
 
     overflow: auto;
 
-    --medium:calc(1.5rem + 1vw);
-    --big:calc(var(--medium) * 1.6);
-    --small:calc(var(--medium) / 1.6);
-
-    --light: white;
-    --dark: #0e1022;
+    
 
 
     box-shadow: inset 0 0 0 100000px rgba(0,0,0,.1);
