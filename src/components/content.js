@@ -43,9 +43,9 @@ function Content(props){
             <div className="flexContainer left">
                 <div className="location">
                     <div className="description">{allUpper(weather[0].description)}</div>
-                    <div className="name">{name} {sys.country}</div>
-                    <div className="date">{date.weekday}, {date.month} {date.day} {date.year}</div>
-                    <div>{date.time}</div>
+                    <div className="name subtext">{name} {sys.country}</div>
+                    <div className="date subtext">{date.weekday}, {date.month} {date.day} {date.year}</div>
+                    <div className="time subtext">{date.time}</div>
                 </div>
                 <Search search={search}/>
                 <div className="temp">{KelvinToCelsius(main.temp)} °C</div>
