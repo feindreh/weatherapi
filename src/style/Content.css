@@ -38,6 +38,9 @@
     font-weight: 700;
 }
 /*Left*/
+.subtext{
+    font-size: var(--small);
+}
 .flexContainer.left{
     align-items:flex-start;
 }
