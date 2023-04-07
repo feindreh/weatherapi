@@ -46,11 +46,6 @@ function App() {
     return dawn
   }
 
-
-  useEffect(()=>{
-   startSearch("Heidelberg")
-},[])
-
   async function startSearch(cityName,cb){
     setData({})
     //cb for search component
