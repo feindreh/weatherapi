@@ -7,8 +7,6 @@ import Autocomplete from "./autocomplete";
 import Icon from '@mdi/react';
 import { mdiMagnify } from '@mdi/js';
 
-
-
 import "../style/search.css"
 
 function Search(props){
@@ -18,7 +16,7 @@ function Search(props){
     const inputRef = useRef()
     const [auto,setAuto] = useState([])
     const [timer,setTimer] = useState(null)
-    
+
     function handleButton(){
          //clear Autocomplets + Timer
          // call callback search from props with input value
@@ -42,6 +40,7 @@ function Search(props){
         //autocomplete input string with api
         if(input.length < 3){
             //api doesnt support strings with less then 3 letters
+            setAuto([])
             return
         }
         //fetch data
@@ -70,7 +69,7 @@ function Search(props){
                 <input className = "input" ref={inputRef} onChange = {(e)=>{ AutoCompelteTimer(e.target.value)}}  type="text"  placeholder="Search City ..."></input>
                 <Icon className="glasses" onClick={handleButton} path={mdiMagnify} size={1} />
             </div>
-            <div id="auto">
+             <div className="auto">
                 {auto.map((name) => {return (<Autocomplete key={name} name = {name} cb={()=>{autoSelected(name)}}/>)})}
             </div>
         </div>
