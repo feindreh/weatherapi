@@ -30,7 +30,7 @@ function Content(props){
 
     if(name === undefined){
         return(
-            <>Loading ....</>
+                <Search search={search}/>
         )
     }
     
