@@ -4,7 +4,9 @@
 
 .searchBar{
     display: flex;
+    border-bottom: solid 2px var(--light);
 }
+
 
 .input{
     color:var(--light);
@@ -27,17 +29,18 @@
     width: var(--medium) !important;
 }
 
-#auto{
+.auto{
     width: 100%;
     position: absolute;
     display: flex;
     flex-direction: column;
     background-color: var(--dark);
     opacity: 0.95;
-    border: var(--light) solid 2px;
     border-bottom-left-radius: var(--small);
     border-bottom-right-radius: var(--small);
 }
+
+
 
 .autocomplete{
     margin:0.5rem;
