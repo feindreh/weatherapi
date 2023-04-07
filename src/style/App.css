@@ -1,5 +1,5 @@
 #root{
-    --medium:calc(1.5rem + 1vw);
+    --medium:calc(1.5rem + 0.5vw);
     --big:calc(var(--medium) * 1.6);
     --small:calc(var(--medium) / 1.6);
 
@@ -39,6 +39,6 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    gap:var(--medium);
+    gap:var(--small);
     padding:var(--small);
 }
