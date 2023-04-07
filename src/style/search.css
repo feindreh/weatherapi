@@ -28,6 +28,10 @@
     height: var(--medium) !important;
     width: var(--medium) !important;
 }
+.glasses:hover{
+    transform: translate(2px,-1px) scale(1.2);
+    cursor:grab
+}
 
 .auto{
     width: 100%;
@@ -46,7 +50,10 @@
     margin:0.5rem;
     font-size: var(--small);
     display: flex;
-
+}
+.autocomplete:hover{
+    transform: translateX(var(--small)) scale(1.1);
+    cursor:grab
 }
 
 .autoGlasses{
