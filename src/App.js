@@ -42,7 +42,7 @@ function App() {
       changeColor("dark")
       return day
     }
-    changeColor("dark")
+    changeColor("light")
     return dawn
   }
 
