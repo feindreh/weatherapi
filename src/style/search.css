@@ -7,7 +7,7 @@
 }
 
 .input{
-    color:white;
+    color:var(--light);
     border: none;
     background:none;
     font-size: var(--small);
@@ -18,8 +18,8 @@
 }
 
 ::placeholder { 
-    color: rgb(255, 255, 255);
-    opacity: 1;
+    color: var(--light);
+    opacity: 0.9;
   }
 
 .glasses{
@@ -32,8 +32,9 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: #0e1022f3;
-    border: white solid 2px;
+    background-color: var(--dark);
+    opacity: 0.95;
+    border: var(--light) solid 2px;
     border-bottom-left-radius: var(--small);
     border-bottom-right-radius: var(--small);
 }
