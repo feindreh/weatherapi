@@ -11,7 +11,7 @@
 .data{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     gap:var(--small)
 }
@@ -22,7 +22,7 @@
 }
 .valueWrap{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap:var(--small);
 
